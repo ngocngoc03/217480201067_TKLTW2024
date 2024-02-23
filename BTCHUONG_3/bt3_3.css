@@ -1,0 +1,10 @@
+.box {
+    font-size: 16px;
+    color: black;
+    width: 1080px;
+    border: 2px solid #000;
+    padding: 20px;
+    background-color: pink;
+    font: bold;
+  }
+  
