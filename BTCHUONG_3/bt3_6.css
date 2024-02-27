@@ -1,0 +1,30 @@
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17.5;
+    }
+    .gg {
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: green;
+    }
+    .mm {
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: green;
+    }
+    .ee {
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: green;
+    }
+    #hm {
+        list-style-type: disc;
+        font-style: italic;
+        color: plum;
+        font-size: 12pt;
+    }
+    #km {
+        list-style: square;
+        color: plum;
+        font-size: 12pt;
+    }

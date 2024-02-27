@@ -7,12 +7,35 @@
     font-weight: bold;
     
 }
-span{
+#zero{
     background-color: salmon;
 }
 h2{
     font-style: italic;
 }
-five{
+#five{
     font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: pink;
+    font-weight: lighter;
+}
+#Nam1 {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 13pt;
+color: black;
+}
+#Nam2 {
+    font-family: tahoma;
+    font-size: 13pt;
+    color: black;
+}
+#Nam3{
+    font-size: 13pt;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+.four{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: pink;
 }

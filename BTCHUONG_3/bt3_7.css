@@ -1,0 +1,12 @@
+.info {
+    float: left;
+    font-size: 20;
+    background-color: rgb(112, 196, 218);
+    height: 30vh;
+}
+.intro {
+   float: left;
+   font-size: 18;
+   background-color: rgb(160, 187, 187);
+   height: 30vh;
+}
