@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị ngày tháng năm</title>
+</head>
+<body>
+    <h1>Ngày tháng năm hiện tại</h1>
+    <p id="date"></p>
+    <script>
+        const dateElement = document.getElementById('date');
+
+        const dateObj = new Date();
+
+        const day = dateObj.getDate();
+        const month = dateObj.getMonth() + 1; // Tháng trong JavaScript bắt đầu từ 0
+        const year = dateObj.getFullYear();
+
+        dateElement.textContent = `${day}/${month}/${year}`;
+    </script>
+</body>
+</html>

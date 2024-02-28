@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Bài tập JavaScript 4B</title>
+</head>
+<body>
+    <script language="JavaScript">
+        document.write("<h1>Bài tập JavaScript 4B</h1><br>");
+        document.write("<br>");
+
+        function hoTen() {
+            alert(txtHoTen.value);
+            alert("Bạn hãy nhập vào ô text và thử lại nhé!");
+        }
+
+        function donVi() {
+            alert(txtDonVi.value);
+            alert("Bạn hãy nhập vào ô text và thử lại nhé <3");
+        }
+    </script>
+
+    <input type="button" name="hoTen" value="Họ tên" onclick="hoTen()">
+    <input type="text" id="txtHoTen" value="Chào" size="40">
+    <br>
+    <input type="button" name="donVi" value="Đơn vị" onclick="donVi()">
+    <input type="text" id="txtDonVi" value="Đơn vị" size="40">
+</body>
+</html>
