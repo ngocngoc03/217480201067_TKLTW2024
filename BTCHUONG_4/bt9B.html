@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Danh sách thiết bị văn phòng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table, th, td{
+    border:1px solid black;
+    }
+    table{
+    border-collapse:collapse;
+    }
+    </style>
 </head>
 <body>
-    <script>
-        var Soluong,x;
-        var DS= new Array(100);
-        Soluong=prompt("Bạn cần nhập số lượng các thiết bị văn phòng: ");
-        for (i=0; i<Soluong; i++)
-        {
-            DS[i]=prompt("Nhập vào tên thiết bị: ","");
+    <script language = "JavaScript">
+        var soluong, x;
+        var ds = new Array(50);
+        soluong = prompt("Nhập vào số thiết bị văn phòng");
+        for ( i = 0; i< soluong; i++){
+            ds[i] = prompt("Nhập vào tên của thiết bị: ");
         }
-        DS.sort();
-        document.write("<h1>Danh sách các thiết bị là: </h1>");
-        for( x in DS)
-        {
-            document.write("<tr><td>" + DS[x] + "</td></tr><br>");
-
+        document.write("<h1>DANH SÁCH CÁC THIẾT BỊ CÓ TÊN LÀ 'COMPUTER' </h1>");
+        document.write("<table border='1'>");
+        document.write("<tr><th>STT</th><th>Tên Thiết Bị</th></tr>");
+        var i=1
+        for (x in ds) {
+            if (ds[x].toLowerCase == "Computer".toLowerCase()) {
+                document.write("<tr><td>" + (x) + "</td><td>" + ds[x] + "</td></tr>");
+            }
         }
+        document.write("</table>");
     </script>
 </body>
 </html>

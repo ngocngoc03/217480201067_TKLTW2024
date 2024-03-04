@@ -1,0 +1,108 @@
+.menu {
+    background-color: rgb(107, 163, 216);
+    padding: 0;
+    
+}
+.menu .menu_a{
+    list-style-type: none;
+}
+
+.menu > li {
+    display: inline-block;
+}
+
+.menu li {
+    position: relative;
+}
+.menu>li>a{
+    color: rgb(226, 224, 223) ;
+    text-transform: uppercase;
+}
+.menu li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+.menu li:hover .menu_a {
+    display: block;
+}
+
+.menu > li:hover > a {
+    background-color: #5bb982;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu .menu_a {
+    display: none;
+    min-width: 180px;
+    background-color: rgba(215, 171, 197, 0.282);
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 0;
+}
+
+.menu_a > li{
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.menu_a li:hover{
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu_a li:hover .menu_b {
+    display: block;
+    border: 1px solid black;
+    padding: 0;
+    left: 100%;
+    color: white;   
+}
+
+.menu_a > li:hover > a {
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.menu_b{
+    display: none;
+    position: absolute;
+    width: 200px;
+    left: 100%;
+    top: -1px;
+    background-color: rgb(127, 179, 75);
+    padding: 0;
+    
+}
+body
+{
+    background-color: #5bb982;
+    background-size:cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+.menu_b > li{
+    padding: 10px;
+    display: block;
+    border: 1px solid black;
+}
+
+.menu_b li:hover{
+    background-color: #bfda5f;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.container {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18;
+    
+}
