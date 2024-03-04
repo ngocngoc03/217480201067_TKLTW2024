@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color: FFB5DA;">
+   <h1>Hãy nhập thông tin cá nhân của bạn dưới đây :</h1>
+    Họ và tên:   <input type="text" id="HT" ><br>
+    Năm vào làm: <input type="text" id="NVL" ><br>
+    Hệ số: <input type="number" id="HeSo" placeholder="0" ><br>
+    Lương cơ sở : <input type="number" id="LuongCoSo" placeholder="0" onkeyup="Tinhluongcoban()" ><br>
+    <hr>
+    Lương cơ bản: <input type="number" id="LuongCoBan" placeholder="0" onkeyup="Tinhphucap" readonly ><br>
+    Phụ Cấp: <input type="number" id="PhuCap" placeholder="0 " readonly><br>
+    Thâm niên: <input type="number" id="Thamnien" readonly><br>
+    Thành tiền: <input type="text" id="ThanhTien" value="0" readonly> USD
+    <script>
+        function Tinhluongcoban (){
+        var HeSo = document.getElementById("HeSo").value;
+        var LuongCoSo = document.getElementById("LuongCoSo").value;
+        var LuongCoBan = HeSo * LuongCoSo;
+      document.getElementById("LuongCoBan").value =LuongCoBan .toFixed(2);
+        }
+        function Tinhphucap(){
+        var Tinhluongcoban = document.getElementById("LuongCoBan").value;
+        var PhuCap = 25 *100* Tinhluongcoban;
+      document.getElementById("PhuCap").value =PhuCap .toFixed(2); 
+        }
+    </script>
+</body>
+</html>

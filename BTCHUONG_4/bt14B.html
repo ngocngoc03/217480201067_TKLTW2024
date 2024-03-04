@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Làm toán</title>
+</head>
+<body>
+  <h1>Làm Toán Cùng Tôi Nhé <img src="kitty.gif" alt="mèo con" height="100" width="100"></h1>
+  <form action="#">
+    <input type="text" id="SoHang1" placeholder="Số hạng 1">
+    <br><br>
+    <input type="text" id="SoHang2" placeholder="Số hạng 2">
+    <br><br>
+    <p>Phép toán:</p>
+    <input type="radio" id="cong" name="pheptoan" value="cong" checked>
+    <label for="cong">Cộng</label>
+    <br>
+    <input type="radio" id="tru" name="pheptoan" value="tru">
+    <label for="tru">Trừ</label>
+    <br>
+    <input type="radio" id="nhan" name="pheptoan" value="nhan">
+    <label for="nhan">Nhân</label>
+    <br>
+    <input type="radio" id="chia" name="pheptoan" value="chia">
+    <label for="chia">Chia</label>
+    <br><br>
+    <input type="text" id="KetQua" placeholder="Kết Quả">
+    <br><br>
+    <input type="button" value="Tính" onclick="tinhToan()">
+    <script>
+        function tinhToan() {
+          const soHang1 = parseFloat(document.getElementById("SoHang1").value);
+          const soHang2 = parseFloat(document.getElementById("SoHang2").value);
+          const pheptoan = document.querySelector('input[name="pheptoan"]:checked').value;
+          let ketQua;
+      
+          switch (pheptoan) {
+            case "cong":
+              ketQua = soHang1 + soHang2;
+              break;
+            case "tru":
+              ketQua = soHang1 - soHang2;
+              break;
+            case "nhan":
+              ketQua = soHang1 * soHang2;
+              break;
+            case "chia":
+              if (soHang2 === 0) {
+                alert("Lỗi: Chia cho 0");
+                return;
+              }
+              ketQua = soHang1 / soHang2;
+              break;
+          }
+      
+          document.getElementById("KetQua").value = ketQua;
+        }
+      </script>
+      
+  </form>
+</body>
+</html>

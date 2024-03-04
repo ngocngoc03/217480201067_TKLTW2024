@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách thiết bị văn phòng</title>
+</head>
+<body>
+    <script>
+        var Soluong,x;
+        var DS= new Array(100);
+        Soluong=prompt("Bạn cần nhập số lượng các thiết bị văn phòng: ");
+        for (i=0; i<Soluong; i++)
+        {
+            DS[i]=prompt("Nhập vào tên thiết bị: ","");
+        }
+        DS.sort();
+        document.write("<h1>Danh sách các thiết bị là: </h1>");
+        for( x in DS)
+        {
+            document.write("<tr><td>" + DS[x] + "</td></tr><br>");
+
+        }
+    </script>
+</body>
+</html>

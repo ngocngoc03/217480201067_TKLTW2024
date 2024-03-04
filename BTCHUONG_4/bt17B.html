@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thay đổi màu nền</title>
+</head>
+<script language="JavaScript">
+    function DoiMau() {
+  const mau = document.querySelector('input[name="Mau"]:checked').value;
+  document.body.style.backgroundColor = mau;
+}
+
+</script>
+<body>
+  <h1 style="font-family: 'Courier New', Courier, monospace;color: rgb(26, 69, 106);"> Chọn màu nền </h1>
+  <form onchange="DoiMau()">
+    <input type="radio" id="yellow" name="Mau" value="yelow" checked>
+    <label for="yellow">Màu vàng</label><br>
+    <input type="radio" id="red" name="Mau" value="red">
+    <label for="red">Màu đỏ</label><br>
+    <input type="radio" id="purple" name="Mau" value="purple">
+    <label for="purple">Màu tím</label><br>
+    <input type="radio" id="blue" name="Mau" value="blue">
+    <label for="blue">Màu xanh</label><br>
+  </form>
+</body>
+</html>

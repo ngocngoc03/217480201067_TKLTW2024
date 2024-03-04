@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrating JavaScript in Elements</title>
+    <style>
+        body {
+            font-weight: bold;
+            font-size: 25px;
+            color: darkmagenta;
+            font-family: monospace;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .image-container {
+            margin-right: 20px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LỰA CHỌN BẰNG CÁCH NHẤN CHỌN Ô</h1>
+    <div class="button-container">
+        <div class="image-container">
+            <img src="itacat.jpg" alt="Image">
+        </div>
+        <div>
+            <input type="button" name="Dangky" value="Đăng ký" onclick="alert('Đăng ký E-Mail');">
+            <br><br>
+            <input type="button" name="hello" value="Hello" onclick="alert('Hello World');">
+            <br><br>
+            <input type="button" name ="welcome" value="Welcome " onclick='write("Welcome to JavaScript");'>
+            <br><br>
+            <input type="button" name="nhapso" value="Nhập giá trị" onclick="var x = 10, y = 20; alert('Tổng là: ' + (x + y));">
+            <br><br>
+            <input type="button" name="loichuc" value="Ấn vào đây" onclick="alert('Chúc bạn một ngày vui vẻ!');"> </div>
+    </div>
+</body>
+</html>

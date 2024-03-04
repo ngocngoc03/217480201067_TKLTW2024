@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Tuổi</title>
+</head>
+<body>
+    <script>
+        // Khai báo biến
+        var D = new Date();
+        var namSinh, namHienTai;
+
+        // Lấy năm hiện tại
+        namHienTai = D.getFullYear();
+
+        // Lấy năm sinh từ người dùng
+        namSinh = parseInt(prompt("Bạn sinh năm nào?", ""));
+
+        // Tính tuổi
+        var tuoi = namHienTai - namSinh;
+
+        // Hiển thị kết quả
+        alert("Tuổi của bạn hiện nay là: " + tuoi);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính tích</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;background-color: rgb(236, 156, 172);">
+  <h1>Bạn hãy nhập số lượng và giá:</h1>
+  Số lượng: <input type="number" id="SoLuong">
+  Đơn giá: <input type="number" id="DonGia" onkeyup="tinhThanhTien()">
+  <hr>
+  Thanh tiền: <input type="text" id="ThanhTien" value="0" readonly> USD
+
+  <script>
+    function tinhThanhTien() {
+      var soLuong = document.getElementById("SoLuong").value;
+      var donGia = document.getElementById("DonGia").value;
+      var thanhTien = soLuong * donGia;
+      document.getElementById("ThanhTien").value = thanhTien.toFixed(2);
+    }
+  </script>
+</body>
+</html>
+
