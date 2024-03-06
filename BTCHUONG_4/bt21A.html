@@ -1,36 +1,62 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máy tính đơn giản</title>
 </head>
 <body>
-    <h1>BẠN HÃY NHẬP CÁC SỐ HẠNG VÀO CHỖ TRỐNG NHÉ !</h1>
-    <form >
+  <h1>Hãy nhập các số hạng vào chỗ trống nhé!</h1>
+  <form>
+    <label for="soHang1">Số hạng 1: </label><br>
+    <input type="number" id="soHang1" placeholder="0" required><br>
 
-    <label for="Sohang1">Số hạng 1: </label><br>
-    <input type="number" id="Sohang1" placeholder="0" > <br>
-
-    <label for="Sohang2">Số hạng 2: </label><br>
-    <input type="number" id="Sohang2" placeholder="0" > <br>
+    <label for="soHang2">Số hạng 2: </label><br>
+    <input type="number" id="soHang2" placeholder="0" required><br>
 
     <hr>
 
-    <label for="Ketqua">Kết quả : </label>
-    <input type="number" id="Ketqua" placeholder="0" readonly> <br>
-    <br>
-    <button type="button" onclick="Phepcong()">Cộng</button>
-    </form>
-    
-    <script>
-        function Phepcong()
-        {
-        var Sohang1 = parseFloat(document.getElementById("Sohang1").value);
-        var Sohang2 = parseFloat(document.getElementById("Sohang2").value);
-        var Cong = Sohang1 + Sohang2;
-      document.getElementById("Cong").value = Cong.toFixed(2);
-        }
-    </script>
+    <label for="ketQua">Kết quả: </label>
+    <input type="number" id="ketQua" placeholder="0" readonly><br><br>
+
+    <button type="button" onclick="phepCong()">Cộng</button>
+    <button type="button" onclick="phepTru()">Trừ</button>
+    <button type="button" onclick="phepNhan()">Nhân</button>
+    <button type="button" onclick="phepChia()">Chia</button>
+  </form>
+
+  <script>
+    function phepCong() {
+      var soHang1 = parseFloat(document.getElementById("soHang1").value);
+      var soHang2 = parseFloat(document.getElementById("soHang2").value);
+      var cong = soHang1 + soHang2;
+      document.getElementById("ketQua").value = cong.toFixed(2);
+    }
+
+    function phepTru() {
+      var soHang1 = parseFloat(document.getElementById("soHang1").value);
+      var soHang2 = parseFloat(document.getElementById("soHang2").value);
+      var tru = soHang1 - soHang2;
+      document.getElementById("ketQua").value = tru.toFixed(2);
+    }
+
+    function phepNhan() {
+      var soHang1 = parseFloat(document.getElementById("soHang1").value);
+      var soHang2 = parseFloat(document.getElementById("soHang2").value);
+      var nhan = soHang1 * soHang2;
+      document.getElementById("ketQua").value = nhan.toFixed(2);
+    }
+
+    function phepChia() {
+      var soHang1 = parseFloat(document.getElementById("soHang1").value);
+      var soHang2 = parseFloat(document.getElementById("soHang2").value);
+      if (soHang2 === 0) {
+        alert("Không thể chia cho 0!");
+        return;
+      }
+      var chia = soHang1 / soHang2;
+      document.getElementById("ketQua").value = chia.toFixed(2);
+    }
+  </script>
 
 </body>
 </html>
