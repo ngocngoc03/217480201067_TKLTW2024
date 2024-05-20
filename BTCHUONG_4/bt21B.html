@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Làm toán </title>
+  <style>
+body{
+    background-color: darkgray;
+    
+}
+  </style>
+</head>
+<body>
+  <h1>Hãy nhập các số hạng vào chỗ trống nhé!</h1>
+  <form >
+    <label for="soHang1">Số hạng 1: </label><br>
+    <input type="number" id="soHang1" placeholder="0" required><br>
+
+    <label for="soHang2">Số hạng 2: </label><br>
+    <input type="number" id="soHang2" placeholder="0" required><br>
+
+    <hr>
+
+    <label for="ketQua">Kết quả: </label><br>
+    <input type="number" id="ketQua" placeholder="0" readonly><br><br>
+
+    <input type="radio" id="phepCong" name="operation" value="cong" checked> Cộng<br>
+    <input type="radio" id="phepTru" name="operation" value="tru"> Trừ<br>
+    <input type="radio" id="phepNhan" name="operation" value="nhan"> Nhân<br>
+    <input type="radio" id="phepChia" name="operation" value="chia"> Chia<br><br>
+
+    <button type="button" onclick="tinhToan()">Tính toán</button>
+  </form>
+
+  <script>
+    function tinhToan() {
+      var soHang1 = parseFloat(document.getElementById("soHang1").value);
+      var soHang2 = parseFloat(document.getElementById("soHang2").value);
+      var operation = document.querySelector('input[name="operation"]:checked').value;
+
+      if (operation === "chia" && soHang2 === 0) {
+        alert("Không thể chia cho 0!");
+        return;
+      }
+
+      var ketQua;
+      switch (operation) {
+        case "cong":
+          ketQua = soHang1 + soHang2;
+          break;
+        case "tru":
+          ketQua = soHang1 - soHang2;
+          break;
+        case "nhan":
+          ketQua = soHang1 * soHang2;
+          break;
+        case "chia":
+          ketQua = soHang1 / soHang2;
+          break;
+      }
+
+      document.getElementById("ketQua").value = ketQua.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>

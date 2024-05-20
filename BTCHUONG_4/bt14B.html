@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Làm toán</title>
 </head>
+<style>
+  h1{
+    text-align: center;
+    font-size: 40px;
+  }
+  .chung{
+    font-size: 25px;
+  }
+</style>
 <body>
   <h1>Làm Toán Cùng Tôi Nhé <img src="kitty.gif" alt="mèo con" height="100" width="100"></h1>
-  <form action="#">
-    <input type="text" id="SoHang1" placeholder="Số hạng 1">
+  <form action="#" class="chung">
+    Số hạng 1: <input type="text" id="SoHang1" placeholder="Số hạng 1">
     <br><br>
-    <input type="text" id="SoHang2" placeholder="Số hạng 2">
+    Số hạng 2: <input type="text" id="SoHang2" placeholder="Số hạng 2">
     <br><br>
     <p>Phép toán:</p>
     <input type="radio" id="cong" name="pheptoan" value="cong" checked>
@@ -25,7 +34,7 @@
     <input type="radio" id="chia" name="pheptoan" value="chia">
     <label for="chia">Chia</label>
     <br><br>
-    <input type="text" id="KetQua" placeholder="Kết Quả">
+    <input type="text" id="KetQua" placeholder="Kết Quả" disabled>
     <br><br>
     <input type="button" value="Tính" onclick="tinhToan()">
     <script>
